@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>お問い合わせ | Wanpaku Works</title>
+    <meta name="description" content="アプリに関するお問い合わせ窓口です。" />
+    <meta name="theme-color" content="#0ea5e9" />
+    <style>
+      :root {
+        --bg: #0b1020;
+        --card: #11162a;
+        --text: #e6eaf2;
+        --muted: #a6b0c2;
+        --primary: #0ea5e9;
+        --primary-700: #0284c7;
+        --border: #232a46;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      }
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg: #f7f8fb;
+          --card: #ffffff;
+          --text: #0f172a;
+          --muted: #475569;
+          --primary: #0ea5e9;
+          --primary-700: #0284c7;
+          --border: #e5e7eb;
+          --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+      }
+      * { box-sizing: border-box; }
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+        color: var(--text);
+        background: radial-gradient(1200px 600px at 10% -10%, rgba(14,165,233,.15), transparent 40%),
+                    radial-gradient(800px 500px at 100% 0%, rgba(99,102,241,.12), transparent 40%),
+                    var(--bg);
+        line-height: 1.6;
+      }
+      .container {
+        max-width: 840px;
+        margin: 0 auto;
+        padding: 24px;
+      }
+      .card {
+        background: linear-gradient(180deg, rgba(255,255,255,.02), transparent 12%), var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 28px;
+        box-shadow: var(--shadow);
+        backdrop-filter: saturate(140%) blur(4px);
+      }
+      header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+      .logo {
+        width: 36px; height: 36px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, var(--primary), var(--primary-700));
+        box-shadow: 0 6px 16px rgba(14,165,233,.35);
+      }
+      h1 {
+        margin: 0;
+        font-size: 1.6rem;
+        letter-spacing: .02em;
+      }
+      p.lead {
+        margin: 6px 0 0 48px;
+        color: var(--muted);
+      }
+      .section {
+        margin-top: 20px;
+        padding-top: 16px;
+        border-top: 1px dashed var(--border);
+      }
+      h2 {
+        margin: 0 0 10px;
+        font-size: 1.1rem;
+      }
+      ul, ol { padding-left: 20px; margin: 8px 0; }
+      li { margin: 6px 0; }
+      .meta {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 16px;
+        margin-top: 8px;
+        color: var(--muted);
+      }
+      .meta div { display: flex; gap: 8px; align-items: center; }
+      .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--primary); box-shadow: 0 0 0 3px rgba(14,165,233,.15); }
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: linear-gradient(135deg, var(--primary), var(--primary-700));
+        color: #fff;
+        padding: 12px 18px;
+        border-radius: 12px;
+        border: none;
+        text-decoration: none;
+        font-weight: 600;
+        box-shadow: 0 10px 22px rgba(14,165,233,.35);
+        transition: transform .06s ease, box-shadow .2s ease;
+        will-change: transform;
+      }
+      .cta:hover { transform: translateY(-1px); box-shadow: 0 14px 28px rgba(14,165,233,.45); }
+      .cta:active { transform: translateY(0); box-shadow: 0 10px 22px rgba(14,165,233,.35); }
+      .cta svg { opacity: .9; }
+      a.link { color: var(--primary); text-underline-offset: 3px; }
+      footer { margin-top: 22px; color: var(--muted); font-size: .92rem; }
+      .note { margin-top: 10px; font-size: .92rem; color: var(--muted); }
+      @media (max-width: 640px) {
+        .meta { grid-template-columns: 1fr; }
+        .card { padding: 22px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card" role="region" aria-labelledby="heading-contact">
+        <header>
+          <div class="logo" aria-hidden="true"></div>
+          <h1 id="heading-contact">お問い合わせ</h1>
+        </header>
+        <p class="lead">アプリに関するご質問・不具合報告・その他のお問い合わせの窓口です。</p>
+
+        <div class="section">
+          <a class="cta" href="mailto:info@wanpaku-works.com">
+            <!-- mail icon -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v11a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 17.5v-11Z" fill="currentColor" fill-opacity=".1"/>
+              <path d="M5 8.5 11.08 13a1.5 1.5 0 0 0 1.84 0L19 8.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+            メールで問い合わせる
+          </a>
+          <div class="meta" aria-label="対応情報">
+            <div><span class="dot"></span><span>対応時間: 平日 10:00〜18:00（日本時間）</span></div>
+            <div><span class="dot"></span><span>回答目安: 2〜3営業日以内（状況により前後）</span></div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>ご連絡の際にご記入ください</h2>
+          <ol>
+            <li>お名前（任意）</li>
+            <li>ご利用中のアプリ名・バージョン</li>
+            <li>端末名・OSバージョン（例: iPhone 15, iOS 18.0）</li>
+            <li>お問い合わせ内容（できるだけ詳しく）</li>
+            <li>不具合の場合は再現手順・発生頻度・スクリーンショット等</li>
+          </ol>
+        </div>
+
+        <div class="section">
+          <h2>個人情報の取り扱い</h2>
+          <p>
+            お問い合わせに際して取得した個人情報の取り扱いは、
+            <a class="link" href="./PrivacyPolicy.html">プライバシーポリシー</a> に従います。
+          </p>
+        </div>
+
+        <footer>
+          内容により回答までお時間をいただく場合や、回答いたしかねる場合があります。
+          <div class="note">掲載されている連絡先は予告なく変更される場合があります。</div>
+        </footer>
+      </div>
+    </div>
+  </body>
+  </html>
+
+
